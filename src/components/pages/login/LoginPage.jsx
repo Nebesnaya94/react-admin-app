@@ -7,8 +7,8 @@ import img2 from "../../../assets/images/login_img_2.png";
 import img3 from "../../../assets/images/login_img_3.png";
 
 export const LoginPage = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("test@nyblecraft.com");
+  const [password, setPassword] = useState("12345678qQ");
   const login = useLogin();
   const notify = useNotify();
 
