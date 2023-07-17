@@ -1,0 +1,69 @@
+.item-details {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 440px;
+  z-index: 1200;
+  border-radius: 0;
+  background: $background-color;
+  box-shadow: -4px 0px 20px 0px rgba($shadow-color, 0.2);
+  border-left: $block-border-style;
+
+  &__wrapper {
+    position: relative;
+    height: 100%;
+    padding: 40px 16px;
+  }
+
+  &__data {
+    border: $block-border-style;
+    border-radius: 8px;
+  }
+
+  &__close {
+    &.MuiButtonBase-root {
+      @include close-button;
+      top: 8px;
+      left: -16px;
+      border: 2px solid #eff0f1;
+      box-shadow: -4px 0px 20px 0px rgba($shadow-color, 0.2);
+    }
+  }
+}
+
+.details-data {
+  &__button-wrapper {
+    @include font-24-32-700;
+    padding: 24px 16px;
+    border-bottom: $block-border-style;
+
+    > span {
+      line-height: 45px;
+    }
+  }
+
+  &__button {
+    &.MuiButtonBase-root {
+      @include main-color-button;
+      padding: 11px;
+      width: 100%;
+
+      span {
+        color: $background-color;
+      }
+    }
+  }
+
+  &__wrapper {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include font-14-20-400;
+  }
+
+  &__title {
+    color: $title-color;
+  }
+}

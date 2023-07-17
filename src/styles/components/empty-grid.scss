@@ -1,0 +1,40 @@
+.empty-grid {
+  margin-left: 252px;
+
+  &__container {
+    margin: 190px auto;
+    max-width: 368px;
+    text-align: center;
+
+    img {
+      display: block;
+      margin: 0 0 16px 132px;
+      height: 132px;
+      width: 150px;
+    }
+
+    h3 {
+      @include font-18-24-600;
+      margin-bottom: 8px;
+    }
+
+    p {
+      @include font-14-22-400;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__clear-button {
+    &.MuiButtonBase-root {
+      @include base-button;
+      padding: 8px 70px;
+      border-radius: 8px;
+      background: #f5f6f9;
+      color: $main-color;
+
+      &:hover {
+        background: #f5f6f9;
+      }
+    }
+  }
+}

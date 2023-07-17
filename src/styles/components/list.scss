@@ -1,0 +1,149 @@
+.list-label {
+  position: fixed;
+  top: 24px;
+  left: 276px;
+  z-index: 1200;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  &__title {
+    @include font-24-32-700;
+  }
+
+  &__count {
+    &.MuiChip-root {
+      height: fit-content;
+      width: 80px;
+      background: rgba($color: #3626a7, $alpha: 0.1);
+      border-radius: 26px;
+
+      .MuiChip-label {
+        @include font-14-24-600;
+        color: $main-color;
+        padding: 4px 16px;
+      }
+    }
+  }
+}
+
+.MuiSvgIcon-root.MuiTableSortLabel-icon.RaDatagridHeaderCell-icon {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.MuiButtonBase-root.MuiTableSortLabel-root {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: url("../assets/images/icon_sort.svg") center no-repeat;
+    height: 16px;
+    width: 16px;
+    right: -20px;
+  }
+}
+
+.MuiTableRow-root.MuiTableRow-hover.RaDatagrid-row:hover {
+  background: #f8f9fc;
+}
+
+.MuiTableRow-head.RaDatagrid-headerRow {
+  background: #e7e8ef;
+
+  .MuiTableCell-head.RaDatagrid-headerCell {
+    background: #e7e8ef;
+  }
+}
+
+.MuiTableCell-root {
+  padding: 0;
+  cursor: pointer;
+  padding: 12px 0;
+
+  &.column-job_title {
+    padding-right: 70px;
+  }
+
+  &.MuiTableCell-head {
+    @include font-14-24-600;
+    background: #e7e8ef;
+    padding-left: 0;
+    padding-right: 0;
+
+    &.column-id {
+      padding: 12px 32px;
+      width: 230px;
+    }
+
+    &.column-job_title {
+      padding-left: 70px;
+    }
+  }
+
+  &.MuiTableCell-body {
+    @include font-14-24-400;
+    padding: 0;
+    height: 56px;
+
+    div {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      text-transform: capitalize;
+    }
+
+    &.column-id {
+      border-right: $block-border-style;
+
+      div {
+        padding: 8px 32px;
+      }
+    }
+
+    &.column-job_title {
+      padding-left: 70px;
+    }
+  }
+}
+
+.MuiTableCell-root {
+  &.column-country {
+    width: 253px;
+  }
+
+  &.column-job_title {
+    width: 370px;
+  }
+}
+
+.list-button {
+  &.MuiButtonBase-root {
+    @include transparent-color-button;
+    @include font-14-20-500;
+    width: 100%;
+    height: 100%;
+    border: $block-border-style;
+    background: $background-color;
+    gap: 11px;
+
+    span {
+      color: $main-color;
+    }
+  }
+
+  &__icon {
+    position: relative;
+  }
+
+  .button-icon {
+    &__verify {
+      position: absolute;
+      top: -3px;
+      right: -3px;
+    }
+  }
+}

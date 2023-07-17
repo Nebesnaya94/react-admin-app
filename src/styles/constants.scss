@@ -1,0 +1,172 @@
+$main-color: #3626a7;
+$title-color: #9195a4;
+$text-color: #151515;
+$background-color: #fff;
+$shadow-color: #6f717a;
+
+$block-border-style: 1px solid #e7e8ef;
+
+@mixin font-12-12-400 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+@mixin font-12-24-600 {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+@mixin font-14-18-500 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+@mixin font-14-20-400 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+@mixin font-14-20-500 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+@mixin font-14-20-600 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+@mixin font-14-22-400 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+@mixin font-14-24-400 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@mixin font-14-24-500 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+@mixin font-14-24-600 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+@mixin font-14-32-400 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+@mixin font-16-24-700 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+@mixin font-18-24-600 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+@mixin font-24-32-900 {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 32px;
+}
+
+@mixin font-24-32-700 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+@mixin font-24-48-900 {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 48px;
+}
+
+@mixin font-32-40-800 {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 40px;
+}
+
+@mixin base-field {
+  border-radius: 6px;
+  font-family: Mulish, sans-serif;
+  @include font-14-24-400;
+
+  .MuiOutlinedInput-notchedOutline {
+    border: $block-border-style;
+  }
+
+  &.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: $main-color;
+    border-width: 1px;
+  }
+
+  .MuiInputBase-input {
+    &::-webkit-input-placeholder {
+      color: $title-color;
+      opacity: 1;
+    }
+  }
+
+  .MuiSvgIcon-root {
+    fill: $title-color;
+  }
+}
+
+@mixin base-button {
+  @include font-14-24-600;
+  font-family: Mulish, sans-serif;
+  text-transform: none;
+  gap: 8px;
+}
+
+@mixin main-color-button {
+  @include base-button;
+  background: $main-color;
+  padding: 12px 120px 12px 120px;
+  border-radius: 8px;
+
+  &:hover {
+    background: $main-color;
+  }
+}
+
+@mixin transparent-color-button {
+  @include base-button;
+  color: $main-color;
+  padding: 0;
+}
+
+@mixin close-button {
+  position: absolute;
+  background: $background-color;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  min-width: 0;
+
+  &:hover {
+    background: $background-color;
+  }
+}
