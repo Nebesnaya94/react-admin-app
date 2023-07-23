@@ -2,7 +2,6 @@ $main-color: #3626a7;
 $title-color: #9195a4;
 $text-color: #151515;
 $background-color: #fff;
-$shadow-color: #6f717a;
 
 $block-border-style: 1px solid #e7e8ef;
 
@@ -149,6 +148,10 @@ $block-border-style: 1px solid #e7e8ef;
 
   &:hover {
     background: $main-color;
+  }
+
+  span {
+    color: $background-color;
   }
 }
 
