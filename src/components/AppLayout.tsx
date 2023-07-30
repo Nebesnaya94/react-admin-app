@@ -1,7 +1,7 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import { styled } from "@mui/material";
 import { HeaderAppBar } from "./HeaderAppBar";
+import { CoreLayoutProps } from "react-admin";
 
 const Root = styled("div")(({ theme }) => ({
   display: "flex",
@@ -30,7 +30,7 @@ const Content = styled("div")(({ theme }) => ({
   marginTop: "96px",
 }));
 
-export const AppLayout = ({ children }) => (
+export const AppLayout: React.FC<CoreLayoutProps> = ({ children }) => (
   <Root>
     <AppFrame>
       <HeaderAppBar />
@@ -40,7 +40,3 @@ export const AppLayout = ({ children }) => (
     </AppFrame>
   </Root>
 );
-
-AppLayout.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
-};

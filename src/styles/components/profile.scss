@@ -20,15 +20,13 @@
     display: flex;
     gap: 32px;
   }
-
-  &__card-block {
-    border: $block-border-style;
-    border-radius: 8px;
-    width: 488px;
-  }
 }
 
 .profile-card {
+  border: $block-border-style;
+  border-radius: 8px;
+  width: 488px;
+
   &__header {
     border-bottom: $block-border-style;
     display: flex;
@@ -112,7 +110,7 @@
   }
 }
 
-.subscription-block {
+.profile-subscription {
   flex-grow: 1;
 
   &__label {
@@ -144,10 +142,6 @@
       @include main-color-button;
       padding: 12px;
       min-width: 156px;
-
-      span {
-        color: $background-color;
-      }
     }
   }
 }

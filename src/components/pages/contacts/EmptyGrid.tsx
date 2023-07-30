@@ -1,13 +1,13 @@
-import React from "react";
+import React, { FC } from "react";
 import noResults from "../../../assets/images/no_results.png";
 import Button from "@mui/material/Button";
 import { useListFilterContext } from "react-admin";
 
-export const EmptyGrid = () => {
+export const EmptyGrid: FC = () => {
   const { setFilters } = useListFilterContext();
 
   const clearFilters = () => {
-    setFilters({});
+    setFilters({}, {});
   };
 
   return (

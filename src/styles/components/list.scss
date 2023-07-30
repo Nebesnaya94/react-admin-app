@@ -130,6 +130,11 @@
     background: $background-color;
     gap: 11px;
 
+    &:hover {
+      background: $background-color;
+      border-color: $main-color;
+    }
+
     span {
       color: $main-color;
     }

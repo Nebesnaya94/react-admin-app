@@ -1,7 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import { FilterLiveSearch } from "react-admin";
+import { IFilterProps } from "../../models/types";
 
-export const FilterInput = (props) => {
+export const FilterInput: FC<IFilterProps> = (props) => {
   const { label, source, icon } = props;
 
   return (

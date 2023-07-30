@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { FC } from "react";
 import { List, Datagrid } from "react-admin";
 import { ContactsPagination } from "../../UI/ContactsPagination";
 import { ListNameButton } from "../../UI/ListNameButton";
@@ -9,13 +9,10 @@ import { ListField } from "./ListField";
 import { EmptyList } from "./EmptyList";
 import { listContainer } from "../../../styles/sx";
 import { EmptyGrid } from "./EmptyGrid";
+import { IContact } from "../../../models/types";
 
-export const ContactsList = () => {
-  const [rowData, setRowData] = React.useState(null);
-
-  const handleCloseItem = (value) => {
-    setRowData(value);
-  };
+export const ContactsList: FC = () => {
+  const [rowData, setRowData] = React.useState<IContact | null>(null);
 
   return (
     <div>
@@ -29,25 +26,21 @@ export const ContactsList = () => {
         <ContactsListLabel />
         <Datagrid bulkActionButtons={false} empty={<EmptyGrid />}>
           <ListNameButton
-            handleButton={setRowData}
+            handleItem={setRowData}
             source="id"
             label="Full name"
           />
+          <ListField handleItem={setRowData} source="job_title" />
+          <ListField handleItem={setRowData} source="industry" />
           <ListField
-            headerClassName="qqq"
-            handleClick={setRowData}
-            source="job_title"
-          />
-          <ListField handleClick={setRowData} source="industry" />
-          <ListField
-            handleClick={setRowData}
+            handleItem={setRowData}
             label="Location"
             source="country"
           />
         </Datagrid>
       </List>
       {rowData && (
-        <ContactsItemDetails handleClose={handleCloseItem} item={rowData} />
+        <ContactsItemDetails handleClose={setRowData} item={rowData} />
       )}
     </div>
   );

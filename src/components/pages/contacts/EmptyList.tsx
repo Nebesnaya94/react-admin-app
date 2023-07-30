@@ -1,10 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 import emptyImg1 from "../../../assets/images/empty_state_1.png";
 import emptyImg2 from "../../../assets/images/Empty_Searches.png";
 import hintArrowIcon from "../../../assets/images/hint_arrow_icon.svg";
 import iconHistory from "../../../assets/images/icon_history.svg";
 
-export const EmptyList = () => {
+export const EmptyList: FC = () => {
   return (
     <div className="empty-list">
       <div className="empty-list__container">

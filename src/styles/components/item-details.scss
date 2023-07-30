@@ -7,7 +7,7 @@
   z-index: 1200;
   border-radius: 0;
   background: $background-color;
-  box-shadow: -4px 0px 20px 0px rgba($shadow-color, 0.2);
+  box-shadow: -4px 0px 20px 0px rgba(#6f717a, 0.2);
   border-left: $block-border-style;
 
   &__wrapper {
@@ -27,7 +27,7 @@
       top: 8px;
       left: -16px;
       border: 2px solid #eff0f1;
-      box-shadow: -4px 0px 20px 0px rgba($shadow-color, 0.2);
+      box-shadow: -4px 0px 20px 0px rgba(#6f717a, 0.2);
     }
   }
 }
@@ -48,10 +48,6 @@
       @include main-color-button;
       padding: 11px;
       width: 100%;
-
-      span {
-        color: $background-color;
-      }
     }
   }
 

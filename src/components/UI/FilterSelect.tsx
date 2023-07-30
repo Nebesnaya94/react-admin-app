@@ -1,15 +1,22 @@
-import { memo, useMemo, useState, useEffect } from "react";
+import { memo, useMemo, useState, useEffect, FC } from "react";
 import { useListFilterContext } from "react-admin";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { fetchFilteredData } from "../../API/helpers";
 import { upFirstLetter } from "../../API/helpers";
+import { SelectChangeEvent } from "@mui/material";
+import { IFilterProps } from "../../models/types";
 
-export const FilterSelect = memo((props) => {
+interface ISelectValue {
+  name: string;
+  id: string;
+}
+
+export const FilterSelect: FC<IFilterProps> = memo((props) => {
   const { filterValues, setFilters } = useListFilterContext();
   const { source, label, link, icon } = props;
-  const [values, getValues] = useState([]);
+  const [values, getValues] = useState<ISelectValue[]>([]);
 
   useEffect(() => {
     fetchFilteredData(link).then((data) => {
@@ -17,8 +24,8 @@ export const FilterSelect = memo((props) => {
     });
   }, []);
 
-  const handleChanges = (event) => {
-    setFilters({ ...filterValues, [source]: event.target.value }, null);
+  const handleChanges = (e: SelectChangeEvent) => {
+    setFilters({ ...filterValues, [source]: e.target.value }, null);
   };
 
   const initialValue = useMemo(

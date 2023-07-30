@@ -1,10 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 
-export const HeaderAppBar = () => {
+export const HeaderAppBar: FC = () => {
   return (
     <AppBar className="header">
       <Toolbar className="header__wrapper">
