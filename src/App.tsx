@@ -8,8 +8,9 @@ import { authProvider } from "./API/authProvider";
 import { LoginPage } from "./components/pages/login/LoginPage";
 import { ProfilePage } from "./components/pages/profile/ProfilePage";
 import { AppLayout } from "./components/AppLayout";
+import { FC } from "react";
 
-export const App = () => (
+export const App: FC = () => (
   <Admin
     theme={theme}
     layout={AppLayout}

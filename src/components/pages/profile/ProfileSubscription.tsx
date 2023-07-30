@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import Button from "@mui/material/Button";
 import subsIcon from "../../../assets/images/icon_subs.svg";
 
-export const ProfileSubscription = () => {
+export const ProfileSubscription: FC = () => {
   return (
     <div className="profile-subscription">
       <h2 className="profile-subscription__label">Subscription</h2>

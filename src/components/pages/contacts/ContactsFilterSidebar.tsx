@@ -7,12 +7,13 @@ import iconJobTitle from "../../../assets/images/icon_jobtitle.svg";
 import Chip from "@mui/material/Chip";
 import Button from "@mui/material/Button";
 import { useListFilterContext } from "react-admin";
+import { FC } from "react";
 
-export const ContactsFilterSidebar = () => {
+export const ContactsFilterSidebar: FC = () => {
   const { filterValues, setFilters } = useListFilterContext();
 
   const clearFilters = () => {
-    setFilters({});
+    setFilters({}, {});
   };
 
   return (

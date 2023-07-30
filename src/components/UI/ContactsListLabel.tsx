@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import Chip from "@mui/material/Chip";
 import { useListContext } from "react-admin";
 
-export const ContactsListLabel = () => {
+export const ContactsListLabel: FC = () => {
   const { total } = useListContext();
 
   return (

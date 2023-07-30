@@ -1,20 +1,30 @@
-import React from "react";
+import React, { FC } from "react";
 import { ItemNameButton } from "../../UI/ItemNameButton";
 import { useStore } from "react-admin";
 import Button from "@mui/material/Button";
 import itemClose from "../../../assets/images/item_close.svg";
+import { IContact } from "../../../models/types";
 
-export const ContactsItemDetails = ({ item, handleClose }) => {
-  const [fullName] = useStore(item.id, null);
+interface IDetailsProps {
+  item: IContact;
+  handleClose: (record: IContact | null) => void;
+}
 
-  const closeItem = () => {
-    handleClose(null);
-  };
+export const ContactsItemDetails: FC<IDetailsProps> = ({
+  item,
+  handleClose,
+}) => {
+  const [fullName] = useStore<string | null>(item?.id, null);
 
   return (
     <div className="item-details">
       <div className="item-details__wrapper">
-        <Button onClick={closeItem} className="item-details__close">
+        <Button
+          onClick={() => {
+            handleClose(null);
+          }}
+          className="item-details__close"
+        >
           <img src={itemClose} alt="modal_close" />
         </Button>
         <div className="item-details__data details-data">

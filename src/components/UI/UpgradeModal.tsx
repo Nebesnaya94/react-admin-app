@@ -3,18 +3,20 @@ import Modal from "@mui/material/Modal";
 import modalImage from "../../assets/images/modal_image.png";
 import modalClose from "../../assets/images/modal_close.svg";
 import Button from "@mui/material/Button";
+import { FC } from "react";
 
-export function UpgradeModal({ show, handleShow }) {
-  const handleClose = () => {
-    handleShow(false);
-  };
+interface IModalProps {
+  show: boolean;
+  handleShow: () => void;
+}
 
+export const UpgradeModal: FC<IModalProps> = ({ show, handleShow }) => {
   return (
     <div>
       <Modal open={show}>
         <Box sx={{ boxShadow: 24 }}>
           <div className="modal">
-            <Button onClick={handleClose} className="modal__close">
+            <Button onClick={() => handleShow()} className="modal__close">
               <img src={modalClose} alt="modal_close" />
             </Button>
             <img className="modal__icon" src={modalImage} alt="modal_icon" />
@@ -42,4 +44,4 @@ export function UpgradeModal({ show, handleShow }) {
       </Modal>
     </div>
   );
-}
+};

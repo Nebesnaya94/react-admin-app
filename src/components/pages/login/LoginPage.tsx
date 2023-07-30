@@ -2,8 +2,9 @@ import { LoginForm } from "./LoginForm";
 import img1 from "../../../assets/images/login_img_1.png";
 import img2 from "../../../assets/images/login_img_2.png";
 import img3 from "../../../assets/images/login_img_3.png";
+import { FC } from "react";
 
-export const LoginPage = () => {
+export const LoginPage: FC = () => {
   return (
     <div className="login-page">
       <div className="login-page__wrapper">

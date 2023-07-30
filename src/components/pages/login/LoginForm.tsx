@@ -1,22 +1,22 @@
-import React from "react";
+import React, { FC } from "react";
 import { useState } from "react";
 import { useLogin, useNotify } from "react-admin";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
-export const LoginForm = () => {
-  const [email, setEmail] = useState("test@nyblecraft.com");
-  const [password, setPassword] = useState("12345678qQ");
+export const LoginForm: FC = () => {
+  const [email, setEmail] = useState<string>("test@nyblecraft.com");
+  const [password, setPassword] = useState<string>("12345678qQ");
   const login = useLogin();
   const notify = useNotify();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     login({ email, password }).catch(() => notify("Invalid email or password"));
   };
 
   const showEmpty = () => {
-    localStorage.setItem("hideList", true);
+    localStorage.setItem("hideList", "true");
   };
 
   return (

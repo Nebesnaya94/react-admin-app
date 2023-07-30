@@ -1,10 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 import Button from "@mui/material/Button";
 import { LogoutButton } from "../../UI/LogoutButton";
 import TextField from "@mui/material/TextField";
 import changeIcon from "../../../assets/images/icon_change.svg";
 
-export const ProfileCard = () => {
+export const ProfileCard: FC = () => {
   return (
     <div className="profile-card">
       <div className="profile-card__header">
