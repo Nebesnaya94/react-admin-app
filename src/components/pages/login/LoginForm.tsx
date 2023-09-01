@@ -12,7 +12,9 @@ export const LoginForm: FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    login({ email, password }).catch(() => notify("Invalid email or password"));
+    login({ email, password }).catch(() =>
+      notify("Error 404: Server not found")
+    );
   };
 
   const showEmpty = () => {
