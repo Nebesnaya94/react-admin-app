@@ -116,9 +116,18 @@ $block-border-style: 1px solid #e7e8ef;
     border: $block-border-style;
   }
 
-  &.Mui-focused .MuiOutlinedInput-notchedOutline {
-    border-color: $main-color;
-    border-width: 1px;
+  &.Mui-focused {
+    .MuiOutlinedInput-notchedOutline {
+      border-color: $main-color;
+      border-width: 1px;
+    }
+
+    &.Mui-error {
+      .MuiOutlinedInput-notchedOutline {
+        border-color: red;
+        border-width: 1px;
+      }
+    }
   }
 
   .MuiInputBase-input {
