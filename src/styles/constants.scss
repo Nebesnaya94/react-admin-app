@@ -83,6 +83,12 @@ $block-border-style: 1px solid #e7e8ef;
   line-height: 24px;
 }
 
+@mixin font-20-40-900 {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 40px;
+}
+
 @mixin font-24-32-900 {
   font-size: 24px;
   font-weight: 900;
@@ -99,6 +105,12 @@ $block-border-style: 1px solid #e7e8ef;
   font-size: 24px;
   font-weight: 900;
   line-height: 48px;
+}
+
+@mixin font-26-32-800 {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 32px;
 }
 
 @mixin font-32-40-800 {
