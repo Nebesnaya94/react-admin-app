@@ -1,7 +1,6 @@
 import React, { FC } from "react";
-import { List, Datagrid } from "react-admin";
+import { List, Datagrid, ReferenceField } from "react-admin";
 import { ContactsPagination } from "../../UI/ContactsPagination";
-import { ListNameButton } from "../../UI/ListNameButton";
 import { ContactsFilterSidebar } from "./ContactsFilterSidebar";
 import { ContactsItemDetails } from "./ContactsItemDetails";
 import { ContactsListLabel } from "../../UI/ContactsListLabel";
@@ -25,18 +24,11 @@ export const ContactsList: FC = () => {
       >
         <ContactsListLabel />
         <Datagrid bulkActionButtons={false} empty={<EmptyGrid />}>
-          <ListNameButton
-            handleItem={setRowData}
-            source="id"
-            label="Full name"
-          />
-          <ListField handleItem={setRowData} source="job_title" />
-          <ListField handleItem={setRowData} source="industry" />
-          <ListField
-            handleItem={setRowData}
-            label="Location"
-            source="country"
-          />
+          <ListField handleItem={setRowData} label="No" source="id" />
+          <ReferenceField source="userId" label="Author" reference="users">
+            <ListField handleItem={setRowData} source="username" />
+          </ReferenceField>
+          <ListField handleItem={setRowData} label="Post" source="title" />
         </Datagrid>
       </List>
       {rowData && (

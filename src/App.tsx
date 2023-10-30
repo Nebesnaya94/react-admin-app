@@ -18,7 +18,7 @@ export const App: FC = () => (
     authProvider={authProvider}
     dataProvider={dataProvider}
   >
-    <Resource name="contacts" list={ContactsList} />
+    <Resource name="posts" list={ContactsList} />
     <CustomRoutes>
       <Route path="/profile" element={<ProfilePage />} />
     </CustomRoutes>

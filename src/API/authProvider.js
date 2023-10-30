@@ -1,8 +1,3 @@
-import { API_URL } from "./dataProvider";
-import { fetchUtils } from "react-admin";
-
-const httpClient = fetchUtils.fetchJson;
-
 export const authProvider = {
   login: ({ email, password, id }) => {
     localStorage.setItem("userEmail", email);

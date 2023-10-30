@@ -8,7 +8,7 @@ import { ProfileSubscription } from "./ProfileSubscription";
 export const ProfilePage: FC = () => {
   return (
     <div className="profile-page">
-      <Link to="/contacts">
+      <Link to="/posts">
         <Button className="profile-page__back-button" variant="text">
           <img src={arrowIcon} alt="arrow_icon" />
           <span>Back to search</span>
