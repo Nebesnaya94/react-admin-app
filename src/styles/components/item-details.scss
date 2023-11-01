@@ -16,7 +16,7 @@
     padding: 40px 16px;
   }
 
-  &__data {
+  &__post {
     border: $block-border-style;
     border-radius: 8px;
   }
@@ -32,8 +32,8 @@
   }
 }
 
-.details-data {
-  &__button-wrapper {
+.post-data {
+  &__title {
     @include font-24-32-700;
     padding: 24px 16px;
     border-bottom: $block-border-style;
@@ -43,23 +43,23 @@
     }
   }
 
-  &__button {
-    &.MuiButtonBase-root {
-      @include main-color-button;
-      padding: 11px;
-      width: 100%;
-    }
+  &__author {
+    padding: 12px 16px 24px;
+    text-align: right;
+    @include font-18-24-600;
   }
 
-  &__wrapper {
+  &__description {
     padding: 24px 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    @include font-14-20-400;
   }
 
-  &__title {
+  &__description-label {
+    @include font-16-24-400;
     color: $title-color;
+    margin-bottom: 5px;
+  }
+
+  &__description-text {
+    @include font-18-24-400;
   }
 }

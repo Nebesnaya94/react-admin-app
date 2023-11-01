@@ -71,9 +71,21 @@ $block-border-style: 1px solid #e7e8ef;
   line-height: 32px;
 }
 
+@mixin font-16-24-400 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
 @mixin font-16-24-700 {
   font-size: 16px;
   font-weight: 700;
+  line-height: 24px;
+}
+
+@mixin font-18-24-400 {
+  font-size: 18px;
+  font-weight: 400;
   line-height: 24px;
 }
 

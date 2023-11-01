@@ -4,7 +4,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { fetchFilteredData } from "../../API/helpers";
-import { upFirstLetter } from "../../API/helpers";
+import { capitalize } from "../../API/helpers";
 import { SelectChangeEvent } from "@mui/material";
 import { IFilterProps } from "../../models/types";
 
@@ -37,7 +37,7 @@ export const FilterSelect: FC<IFilterProps> = memo((props) => {
     <div className="filter-block">
       <div className="filter-block__label">
         <img src={icon} alt="label_icon" />
-        <span>{upFirstLetter(label)}</span>
+        <span>{capitalize(label)}</span>
       </div>
       <div className="filter-block__select">
         <FormControl>

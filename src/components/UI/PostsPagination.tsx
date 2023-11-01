@@ -1,7 +1,7 @@
 import { Pagination, PaginationProps } from "react-admin";
 import { FC } from "react";
 
-export const ContactsPagination: FC<PaginationProps> = () => {
+export const PostsPagination: FC<PaginationProps> = () => {
   return (
     <div>
       <Pagination rowsPerPageOptions={[]} />

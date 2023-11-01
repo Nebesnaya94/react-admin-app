@@ -44,8 +44,6 @@
 }
 
 .MuiTableCell-root {
-  cursor: pointer;
-
   &.MuiTableCell-head {
     @include font-14-24-600;
     background: #e7e8ef;
@@ -54,6 +52,7 @@
 
     &.column-userId {
       width: 30%;
+      border-right: 1px solid $background-color;
     }
 
     &.column-id {
@@ -64,11 +63,17 @@
 
   &.MuiTableCell-body {
     @include font-14-24-400;
-    padding: 6px 30px;
+    padding: 0;
     height: 56px;
+    padding: 6px 30px;
 
-    &.column-id {
+    &.column-id,
+    &.column-userId {
       border-right: $block-border-style;
+    }
+
+    &.column-userId {
+      width: 30%;
     }
   }
 }
