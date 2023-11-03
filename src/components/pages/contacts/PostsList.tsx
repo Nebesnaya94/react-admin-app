@@ -4,7 +4,6 @@ import { PostsPagination } from "../../UI/PostsPagination";
 import { FilterSidebar } from "./FilterSidebar";
 import { PostDetails } from "./PostDetails";
 import { PostsListLabel } from "../../UI/PostsListLabel";
-import { EmptyList } from "./EmptyList";
 import { listContainer } from "../../../styles/sx";
 import { EmptyGrid } from "./EmptyGrid";
 import { IPost } from "../../../models/types";
@@ -35,7 +34,6 @@ export const PostsList: FC = () => {
         actions={false}
         aside={<FilterSidebar />}
         pagination={<PostsPagination />}
-        empty={<EmptyList />}
         sx={listContainer}
       >
         <PostsListLabel />
