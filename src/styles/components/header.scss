@@ -18,17 +18,21 @@
     color: $main-color;
   }
 
-  &__profile {
+  &__logout-button {
     &.MuiButtonBase-root {
       @include transparent-color-button;
-      @include font-12-24-600;
       min-width: 0;
       width: 32px;
       height: 32px;
       border-radius: 6px;
       border: 1px solid #e7e8ef;
       background: #f5f6f9;
-      color: $title-color;
     }
+  }
+
+  &__logout-icon {
+    opacity: 0.5;
+    height: 20px;
+    width: 20px;
   }
 }

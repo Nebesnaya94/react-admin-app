@@ -95,6 +95,12 @@ $block-border-style: 1px solid #e7e8ef;
   line-height: 24px;
 }
 
+@mixin font-20-28-900 {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 28px;
+}
+
 @mixin font-20-40-900 {
   font-size: 20px;
   font-weight: 900;
@@ -176,7 +182,7 @@ $block-border-style: 1px solid #e7e8ef;
 @mixin main-color-button {
   @include base-button;
   background: $main-color;
-  padding: 12px 120px 12px 120px;
+  padding: 12px;
   border-radius: 8px;
 
   &:hover {

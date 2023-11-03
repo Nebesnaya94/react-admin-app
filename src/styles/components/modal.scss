@@ -17,47 +17,61 @@
 
 .modal {
   position: relative;
-  padding: 49px 24px 24px;
+  padding: 8px 24px 24px;
 
-  &__icon {
-    display: block;
-    margin: 0 auto 32px;
+  &__logout-icon {
+    height: 24px;
+    width: 24px;
   }
 
   &__title {
-    @include font-18-24-600;
-    text-align: center;
-    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 48px;
+    @include font-20-28-900;
   }
 
   &__text {
-    @include font-14-22-400;
+    @include font-18-24-600;
     text-align: center;
     margin-bottom: 48px;
   }
 
-  &__upgrade-button {
+  &__buttons {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__cancel-button {
     &.MuiButtonBase-root {
       @include main-color-button;
-      margin-bottom: 16px;
-      width: 100%;
+      @include font-18-24-600;
+      flex-basis: 50%;
     }
   }
 
-  &__later-button {
-    &.MuiButtonBase-root {
-      @include transparent-color-button;
-      display: block;
-      margin: 0 auto;
-    }
-  }
-
-  &__close {
+  &__close-button {
     &.MuiButtonBase-root {
       @include close-button;
       top: 3px;
       right: -8px;
       border: 2px solid #808080;
     }
+  }
+}
+
+.logout {
+  &__text {
+    margin: 0 auto;
+    color: $main-color;
+  }
+
+  &.MuiButtonBase-root.MuiMenuItem-root {
+    @include transparent-color-button;
+    @include font-18-24-600;
+    flex-basis: 50%;
+    border: 1px solid $main-color;
+    border-radius: 8px;
   }
 }

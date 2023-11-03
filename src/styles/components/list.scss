@@ -76,6 +76,10 @@
       width: 30%;
     }
 
+    &.column-title::first-letter {
+      text-transform: uppercase;
+    }
+
     span {
       font-family: Mulish, sans-serif;
     }
