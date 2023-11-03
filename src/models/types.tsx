@@ -9,9 +9,12 @@ export interface IPost extends IGenericObject {
   description: string;
 }
 
-export interface IFilterProps {
-  source: string;
+export interface IFilterInputProps {
   label: string;
-  link?: string;
   icon: string;
+}
+
+export interface IFilterSelectProps extends IFilterInputProps {
+  source: string;
+  link: string;
 }

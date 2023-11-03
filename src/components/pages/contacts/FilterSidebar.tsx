@@ -1,15 +1,14 @@
 import { Card, CardContent } from "@mui/material";
 import { FilterSelect } from "../../UI/FilterSelect";
 import { FilterInput } from "../../UI/FilterInput";
-import iconIndustry from "../../../assets/images/icon_industry.svg";
-import iconLocation from "../../../assets/images/icon_location.svg";
-import iconJobTitle from "../../../assets/images/icon_jobtitle.svg";
+import iconUser from "../../../assets/images/user_icon.svg";
+import iconPost from "../../../assets/images/post_icon.svg";
 import Chip from "@mui/material/Chip";
 import Button from "@mui/material/Button";
 import { useListFilterContext } from "react-admin";
 import { FC } from "react";
 
-export const ContactsFilterSidebar: FC = () => {
+export const FilterSidebar: FC = () => {
   const { filterValues, setFilters } = useListFilterContext();
 
   const clearFilters = () => {
@@ -40,22 +39,12 @@ export const ContactsFilterSidebar: FC = () => {
           )}
         </div>
         <div className="filters__container">
-          <FilterInput
-            icon={iconJobTitle}
-            label="Search by job title"
-            source="job_title"
-          />
+          <FilterInput icon={iconPost} label="post" />
           <FilterSelect
-            icon={iconLocation}
-            label="location"
-            source="country"
-            link="countries"
-          />
-          <FilterSelect
-            icon={iconIndustry}
-            label="industry"
-            source="industry"
-            link="industries"
+            icon={iconUser}
+            label="author"
+            source="userId"
+            link="users"
           />
         </div>
       </CardContent>

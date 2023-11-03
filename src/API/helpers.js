@@ -12,7 +12,7 @@ export async function fetchUser(userId) {
 
 export async function fetchFilteredData(filter) {
   try {
-    const { json } = await httpClient(`${API_URL}/contacts/${filter}`);
+    const { json } = await httpClient(`${API_URL}/${filter}`);
     return json;
   } catch (error) {
     console.error(error);

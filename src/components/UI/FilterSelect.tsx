@@ -6,14 +6,14 @@ import Select from "@mui/material/Select";
 import { fetchFilteredData } from "../../API/helpers";
 import { capitalize } from "../../API/helpers";
 import { SelectChangeEvent } from "@mui/material";
-import { IFilterProps } from "../../models/types";
+import { IFilterSelectProps } from "../../models/types";
 
 interface ISelectValue {
-  name: string;
+  username: string;
   id: string;
 }
 
-export const FilterSelect: FC<IFilterProps> = memo((props) => {
+export const FilterSelect: FC<IFilterSelectProps> = memo((props) => {
   const { filterValues, setFilters } = useListFilterContext();
   const { source, label, link, icon } = props;
   const [values, getValues] = useState<ISelectValue[]>([]);
@@ -59,7 +59,7 @@ export const FilterSelect: FC<IFilterProps> = memo((props) => {
             </MenuItem>
             {values.map((value, index) => (
               <MenuItem key={value.id} value={index + 1}>
-                {value.name}
+                {value.username}
               </MenuItem>
             ))}
           </Select>

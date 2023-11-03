@@ -1,17 +1,16 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { FilterLiveSearch } from "react-admin";
-import { IFilterProps } from "../../models/types";
+import { IFilterInputProps } from "../../models/types";
+import { capitalize } from "../../API/helpers";
 
-export const FilterInput: FC<IFilterProps> = (props) => {
-  const { label, source, icon } = props;
-
+export const FilterInput: FC<IFilterInputProps> = ({ icon, label }) => {
   return (
     <div className="filter-block">
       <div className="filter-block__label">
-        <img src={icon} alt="label_icon" /> <span>Job title</span>
+        <img src={icon} alt="label_icon" /> <span>{capitalize(label)}</span>
       </div>
       <div className="filter-block__input">
-        <FilterLiveSearch label={label} source={source} />
+        <FilterLiveSearch label={`Search ${label}`} />
       </div>
     </div>
   );

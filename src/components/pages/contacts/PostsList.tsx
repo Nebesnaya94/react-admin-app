@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { List, Datagrid, ReferenceField, TextField } from "react-admin";
 import { PostsPagination } from "../../UI/PostsPagination";
-import { ContactsFilterSidebar } from "./ContactsFilterSidebar";
+import { FilterSidebar } from "./FilterSidebar";
 import { PostDetails } from "./PostDetails";
 import { PostsListLabel } from "../../UI/PostsListLabel";
 import { EmptyList } from "./EmptyList";
@@ -33,7 +33,7 @@ export const PostsList: FC = () => {
     <div>
       <List
         actions={false}
-        aside={<ContactsFilterSidebar />}
+        aside={<FilterSidebar />}
         pagination={<PostsPagination />}
         empty={<EmptyList />}
         sx={listContainer}

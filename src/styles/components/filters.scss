@@ -113,7 +113,6 @@
       @include base-field;
 
       .MuiSelect-select {
-        text-transform: capitalize;
         padding: 8px;
 
         em {
@@ -132,7 +131,6 @@
 .MuiPaper-root.MuiMenu-paper {
   box-shadow: 0 4px 8px rgba($color: #d2d4db, $alpha: 0.4);
   border: $block-border-style;
-  // border-right: 2px solid transparent;
   border-radius: 6px;
   margin-top: 4px;
   padding: 8px 0;
