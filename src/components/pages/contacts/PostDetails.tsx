@@ -19,7 +19,7 @@ export const PostDetails: FC<IPostDetailsProps> = ({ post, handleClose }) => {
           }}
           className="item-details__close"
         >
-          <img src={itemClose} alt="modal_close" />
+          <img src={itemClose} alt="item_close" />
         </Button>
         <div className="item-details__post post-data">
           <div className="post-data__title">

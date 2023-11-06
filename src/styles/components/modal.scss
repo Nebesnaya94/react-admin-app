@@ -28,14 +28,14 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 48px;
-    @include font-20-28-900;
+    margin-bottom: 40px;
+    @include font-18-24-700;
   }
 
   &__text {
-    @include font-18-24-600;
+    @include font-14-24-600;
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
   }
 
   &__buttons {
@@ -46,7 +46,7 @@
   &__cancel-button {
     &.MuiButtonBase-root {
       @include main-color-button;
-      @include font-18-24-600;
+      padding: 8px;
       flex-basis: 50%;
     }
   }
@@ -69,9 +69,9 @@
 
   &.MuiButtonBase-root.MuiMenuItem-root {
     @include transparent-color-button;
-    @include font-18-24-600;
+    padding: 8px;
     flex-basis: 50%;
     border: 1px solid $main-color;
-    border-radius: 8px;
+    border-radius: 6px;
   }
 }

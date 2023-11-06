@@ -1,10 +1,10 @@
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import modalClose from "../../assets/images/modal_close.svg";
-import iconLogout from "../../assets/images/icon_logout.svg";
+import modalClose from "../../../assets/images/modal_close.svg";
+import iconLogout from "../../../assets/images/icon_logout.svg";
 import Button from "@mui/material/Button";
 import { FC } from "react";
-import { LogoutButton } from "./LogoutButton";
+import { LogoutButton } from "../../UI/LogoutButton";
 
 interface IModalProps {
   show: boolean;

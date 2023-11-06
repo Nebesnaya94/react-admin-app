@@ -3,7 +3,7 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import LogoutIcon from "../assets/images/icon_logout.svg";
-import { LogoutModal } from "./UI/LogoutModal";
+import { LogoutModal } from "./pages/contacts/LogoutModal";
 
 export const HeaderAppBar: FC = () => {
   const [showModal, setShowModal] = React.useState<boolean>(false);

@@ -11,33 +11,9 @@ $block-border-style: 1px solid #e7e8ef;
   line-height: 12px;
 }
 
-@mixin font-12-24-600 {
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 24px;
-}
-
-@mixin font-14-18-500 {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 18px;
-}
-
 @mixin font-14-20-400 {
   font-size: 14px;
   font-weight: 400;
-  line-height: 20px;
-}
-
-@mixin font-14-20-500 {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-}
-
-@mixin font-14-20-600 {
-  font-size: 14px;
-  font-weight: 600;
   line-height: 20px;
 }
 
@@ -59,6 +35,12 @@ $block-border-style: 1px solid #e7e8ef;
   line-height: 24px;
 }
 
+@mixin font-14-20-600 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
 @mixin font-14-24-600 {
   font-size: 14px;
   font-weight: 600;
@@ -71,34 +53,16 @@ $block-border-style: 1px solid #e7e8ef;
   line-height: 32px;
 }
 
-@mixin font-16-24-400 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-}
-
-@mixin font-16-24-700 {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-}
-
-@mixin font-18-24-400 {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 24px;
-}
-
 @mixin font-18-24-600 {
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
 }
 
-@mixin font-20-28-900 {
-  font-size: 20px;
-  font-weight: 900;
-  line-height: 28px;
+@mixin font-18-24-700 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
 }
 
 @mixin font-20-40-900 {
@@ -107,15 +71,15 @@ $block-border-style: 1px solid #e7e8ef;
   line-height: 40px;
 }
 
-@mixin font-24-32-900 {
-  font-size: 24px;
-  font-weight: 900;
-  line-height: 32px;
-}
-
 @mixin font-24-32-700 {
   font-size: 24px;
   font-weight: 700;
+  line-height: 32px;
+}
+
+@mixin font-24-32-900 {
+  font-size: 24px;
+  font-weight: 900;
   line-height: 32px;
 }
 
