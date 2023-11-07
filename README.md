@@ -1,5 +1,9 @@
 # my-app
 
+## Deploy
+
+The current version of the deployment is located at: https://react-admin-nebesnaya94.netlify.app.
+
 ## Installation
 
 Install the application dependencies by running:
