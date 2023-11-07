@@ -1,6 +1,6 @@
 import { API_URL, httpClient } from "./dataProvider";
 
-export async function fetchUser(userId) {
+export async function fetchUser(userId: number) {
   try {
     const { json } = await httpClient(`${API_URL}/users/${userId}`);
     return json;
@@ -10,7 +10,7 @@ export async function fetchUser(userId) {
   }
 }
 
-export async function fetchFilteredData(filter) {
+export async function fetchFilteredData(filter: string) {
   try {
     const { json } = await httpClient(`${API_URL}/${filter}`);
     return json;
@@ -20,6 +20,6 @@ export async function fetchFilteredData(filter) {
   }
 }
 
-export function capitalize(str) {
+export function capitalize(str?: string) {
   return str ? str[0].toUpperCase() + str.slice(1) : "";
 }
