@@ -10,7 +10,17 @@
     &.MuiToolbar-root {
       justify-content: space-between;
       margin-top: 8px;
+
+      @media (min-width: 0px) {
+        min-height: 64px;
+      }
     }
+  }
+
+  &__logo-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
   }
 
   &__logo {
@@ -34,5 +44,56 @@
     opacity: 0.5;
     height: 20px;
     width: 20px;
+  }
+
+  &__burger-icon {
+    display: none;
+    align-items: center;
+    width: 32px;
+    height: 23px;
+
+    &.active {
+      transform: rotate(45deg);
+
+      .header__burger-line {
+        &::before {
+          top: 0;
+        }
+
+        &::after {
+          top: 0;
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    @media (max-width: 767px) {
+      display: flex;
+    }
+  }
+
+  &__burger-line {
+    position: relative;
+    height: 3px;
+    width: 32px;
+    background: $main-color;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      width: 32px;
+      height: 3px;
+      background: $main-color;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      width: 32px;
+      height: 3px;
+      background: $main-color;
+    }
   }
 }

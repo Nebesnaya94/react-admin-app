@@ -1,5 +1,5 @@
 .item-details {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
@@ -29,6 +29,10 @@
       border: 2px solid #eff0f1;
       box-shadow: -4px 0px 20px 0px rgba(#6f717a, 0.2);
     }
+  }
+
+  @media (max-width: 460px) {
+    width: calc(100vw - 20px);
   }
 }
 

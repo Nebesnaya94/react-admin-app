@@ -1,16 +1,26 @@
 .filters {
   &.MuiPaper-root {
-    order: -1;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     width: 252px;
     z-index: 1200;
+    border-right: $block-border-style;
     border-radius: 0;
     background: none;
     box-shadow: none;
-    border-right: $block-border-style;
+    pointer-events: none;
+
+    &.active {
+      bottom: 0;
+      border-right: $block-border-style;
+    }
+
+    @media (max-width: 767px) {
+      bottom: calc(100vh - 60px);
+      border-right: none;
+    }
   }
 
   &__wrapper {
@@ -19,6 +29,7 @@
       background: $background-color;
       padding: 0px;
       height: 100%;
+      pointer-events: auto;
     }
   }
 

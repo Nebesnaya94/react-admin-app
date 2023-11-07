@@ -12,6 +12,10 @@
     background: url("../assets/images/modal_gradient.png") top no-repeat,
       url("../assets/images/modal_grid.png") top no-repeat $background-color;
     border-top: 1px solid $background-color;
+
+    @media (max-width: 420px) {
+      width: calc(100vw - 48px);
+    }
   }
 }
 

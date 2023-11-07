@@ -5,18 +5,19 @@ import iconUser from "../../../assets/images/user_icon.svg";
 import iconPost from "../../../assets/images/post_icon.svg";
 import Chip from "@mui/material/Chip";
 import Button from "@mui/material/Button";
-import { useListFilterContext } from "react-admin";
+import { useListFilterContext, useStore } from "react-admin";
 import { FC } from "react";
 
 export const FilterSidebar: FC = () => {
   const { filterValues, setFilters } = useListFilterContext();
+  const [isVisible] = useStore("filters-visible", false);
 
   const clearFilters = () => {
     setFilters({}, {});
   };
 
   return (
-    <Card className="filters">
+    <Card className={`filters${isVisible ? " " + "active" : ""}`}>
       <CardContent className="filters__wrapper">
         <div className="filters__header">
           <div className="filters__label">

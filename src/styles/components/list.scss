@@ -25,6 +25,13 @@
       }
     }
   }
+
+  @media (max-width: 767px) {
+    position: absolute;
+    z-index: 100;
+    left: 24px;
+    top: 0;
+  }
 }
 
 .MuiTableRow-root.MuiTableRow-hover.RaDatagrid-row:hover {
@@ -79,5 +86,12 @@
     span {
       font-family: Mulish, sans-serif;
     }
+  }
+}
+
+.MuiPaper-root .RaDatagrid-root .RaDatagrid-tableWrapper {
+  @media (max-width: 767px) {
+    margin-left: 24px;
+    margin-top: 60px;
   }
 }
