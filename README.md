@@ -1,4 +1,4 @@
-# my-app
+# react-admin-app
 
 ## Deploy
 
