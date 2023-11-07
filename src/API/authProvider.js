@@ -1,21 +1,14 @@
-import { API_URL } from "./dataProvider";
-import { fetchUtils } from "react-admin";
-
-const httpClient = fetchUtils.fetchJson;
-
 export const authProvider = {
-  login: ({ email, password }) =>
-    httpClient(`${API_URL}/auth/login`, {
-      method: "POST",
-      body: JSON.stringify({ email, password }),
-    }).then(
-      ({ json }) => (
-        localStorage.setItem("accessToken", json.accessToken),
-        localStorage.setItem("refreshToken", json.refreshToken)
-      )
-    ),
+  login: ({ email, password, id }) => {
+    localStorage.setItem("userEmail", email);
+    localStorage.setItem("userPassword", password);
+    localStorage.setItem("accessToken", id);
+    return Promise.resolve();
+  },
 
   logout: () => {
+    localStorage.removeItem("userEmail");
+    localStorage.removeItem("userPassword");
     localStorage.removeItem("accessToken");
     return Promise.resolve();
   },

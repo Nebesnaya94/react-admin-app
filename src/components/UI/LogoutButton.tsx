@@ -1,8 +1,7 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { forwardRef } from "react";
 import { useLogout } from "react-admin";
 import MenuItem from "@mui/material/MenuItem";
-import logoutIcon from "../../assets/images/icon_logout.svg";
 import { LogoutProps } from "react-admin";
 import { MenuItemProps } from "@mui/material/MenuItem";
 
@@ -14,13 +13,8 @@ export const LogoutButton: FC<LogoutProps & MenuItemProps<"li">> = forwardRef(
     const handleClick = () => logout(null, redirectTo, false);
 
     return (
-      <MenuItem
-        className="logout-button"
-        onClick={handleClick}
-        ref={ref}
-        {...props}
-      >
-        <img src={logoutIcon} alt="logout_icon" /> Logout
+      <MenuItem onClick={handleClick} className="logout" ref={ref} {...props}>
+        <span className="logout__text">Logout</span>
       </MenuItem>
     );
   }

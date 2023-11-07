@@ -1,16 +1,25 @@
 .filters {
   &.MuiPaper-root {
-    order: -1;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     width: 252px;
     z-index: 1200;
+    border-right: $block-border-style;
     border-radius: 0;
     background: none;
     box-shadow: none;
-    border-right: $block-border-style;
+    pointer-events: none;
+    transition: bottom 0.3s;
+
+    &.active {
+      bottom: 0;
+    }
+
+    @media (max-width: 767px) {
+      bottom: 100vh;
+    }
   }
 
   &__wrapper {
@@ -19,6 +28,7 @@
       background: $background-color;
       padding: 0px;
       height: 100%;
+      pointer-events: auto;
     }
   }
 
@@ -113,7 +123,6 @@
       @include base-field;
 
       .MuiSelect-select {
-        text-transform: capitalize;
         padding: 8px;
 
         em {
@@ -132,7 +141,6 @@
 .MuiPaper-root.MuiMenu-paper {
   box-shadow: 0 4px 8px rgba($color: #d2d4db, $alpha: 0.4);
   border: $block-border-style;
-  // border-right: 2px solid transparent;
   border-radius: 6px;
   margin-top: 4px;
   padding: 8px 0;

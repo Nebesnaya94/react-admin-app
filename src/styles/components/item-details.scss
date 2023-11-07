@@ -1,14 +1,27 @@
 .item-details {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
-  width: 440px;
+  width: 0;
   z-index: 1200;
   border-radius: 0;
   background: $background-color;
   box-shadow: -4px 0px 20px 0px rgba(#6f717a, 0.2);
   border-left: $block-border-style;
+  transition: width 0.3s;
+
+  &.active {
+    width: 440px;
+
+    @media (max-width: 460px) {
+      width: calc(100vw - 20px);
+    }
+
+    .item-details__close {
+      transform: scale(1);
+    }
+  }
 
   &__wrapper {
     position: relative;
@@ -16,7 +29,7 @@
     padding: 40px 16px;
   }
 
-  &__data {
+  &__post {
     border: $block-border-style;
     border-radius: 8px;
   }
@@ -28,13 +41,15 @@
       left: -16px;
       border: 2px solid #eff0f1;
       box-shadow: -4px 0px 20px 0px rgba(#6f717a, 0.2);
+      transform: scale(0);
+      transition: scale 0.3s;
     }
   }
 }
 
-.details-data {
-  &__button-wrapper {
-    @include font-24-32-700;
+.post-data {
+  &__title {
+    @include font-18-24-600;
     padding: 24px 16px;
     border-bottom: $block-border-style;
 
@@ -43,23 +58,23 @@
     }
   }
 
-  &__button {
-    &.MuiButtonBase-root {
-      @include main-color-button;
-      padding: 11px;
-      width: 100%;
-    }
+  &__author {
+    padding: 12px 16px 24px;
+    text-align: right;
+    @include font-14-20-600;
   }
 
-  &__wrapper {
+  &__description {
     padding: 24px 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    @include font-14-20-400;
   }
 
-  &__title {
+  &__description-label {
+    @include font-14-24-400;
     color: $title-color;
+    margin-bottom: 5px;
+  }
+
+  &__description-text {
+    @include font-14-24-400;
   }
 }
