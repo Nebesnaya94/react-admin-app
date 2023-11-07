@@ -1,4 +1,6 @@
-export const authProvider = {
+import { IAuthProvider } from "../models/types";
+
+export const authProvider: IAuthProvider = {
   login: ({ email, password, id }) => {
     localStorage.setItem("userEmail", email);
     localStorage.setItem("userPassword", password);
