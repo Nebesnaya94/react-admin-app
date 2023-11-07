@@ -3,7 +3,7 @@ import { styled } from "@mui/material";
 import { HeaderAppBar } from "./HeaderAppBar";
 import { CoreLayoutProps } from "react-admin";
 
-const Root = styled("div")(({ theme }) => ({
+const Root = styled("div")(() => ({
   display: "flex",
   flexDirection: "column",
   zIndex: 1,
@@ -12,18 +12,18 @@ const Root = styled("div")(({ theme }) => ({
   position: "relative",
 }));
 
-const AppFrame = styled("div")(({ theme }) => ({
+const AppFrame = styled("div")(() => ({
   display: "flex",
   flexDirection: "column",
   overflowX: "auto",
 }));
 
-const ContentWithSidebar = styled("main")(({ theme }) => ({
+const ContentWithSidebar = styled("main")(() => ({
   display: "flex",
   flexGrow: 1,
 }));
 
-const Content = styled("div")(({ theme }) => ({
+const Content = styled("div")(() => ({
   display: "flex",
   flexDirection: "column",
   flexGrow: 2,

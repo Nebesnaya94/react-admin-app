@@ -4,16 +4,16 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { fetchFilteredData } from "../../API/helpers";
-import { upFirstLetter } from "../../API/helpers";
+import { capitalize } from "../../API/helpers";
 import { SelectChangeEvent } from "@mui/material";
-import { IFilterProps } from "../../models/types";
+import { IFilterSelectProps } from "../../models/types";
 
 interface ISelectValue {
-  name: string;
+  username: string;
   id: string;
 }
 
-export const FilterSelect: FC<IFilterProps> = memo((props) => {
+export const FilterSelect: FC<IFilterSelectProps> = memo((props) => {
   const { filterValues, setFilters } = useListFilterContext();
   const { source, label, link, icon } = props;
   const [values, getValues] = useState<ISelectValue[]>([]);
@@ -37,7 +37,7 @@ export const FilterSelect: FC<IFilterProps> = memo((props) => {
     <div className="filter-block">
       <div className="filter-block__label">
         <img src={icon} alt="label_icon" />
-        <span>{upFirstLetter(label)}</span>
+        <span>{capitalize(label)}</span>
       </div>
       <div className="filter-block__select">
         <FormControl>
@@ -59,7 +59,7 @@ export const FilterSelect: FC<IFilterProps> = memo((props) => {
             </MenuItem>
             {values.map((value, index) => (
               <MenuItem key={value.id} value={index + 1}>
-                {value.name}
+                {value.username}
               </MenuItem>
             ))}
           </Select>

@@ -1,12 +1,9 @@
 import { API_URL, httpClient } from "./dataProvider";
 
-export async function fetchFullName(id) {
+export async function fetchUser(userId) {
   try {
-    const { body } = await httpClient(`${API_URL}/contacts/${id}/open`, {
-      method: "POST",
-      body: "",
-    });
-    return body.split(/(?=[A-Z])/).join(" ");
+    const { json } = await httpClient(`${API_URL}/users/${userId}`);
+    return json;
   } catch (error) {
     console.error(error);
     return null;
@@ -15,7 +12,7 @@ export async function fetchFullName(id) {
 
 export async function fetchFilteredData(filter) {
   try {
-    const { json } = await httpClient(`${API_URL}/contacts/${filter}`);
+    const { json } = await httpClient(`${API_URL}/${filter}`);
     return json;
   } catch (error) {
     console.error(error);
@@ -23,6 +20,6 @@ export async function fetchFilteredData(filter) {
   }
 }
 
-export function upFirstLetter(str) {
-  return str[0].toUpperCase() + str.slice(1);
+export function capitalize(str) {
+  return str ? str[0].toUpperCase() + str.slice(1) : "";
 }
