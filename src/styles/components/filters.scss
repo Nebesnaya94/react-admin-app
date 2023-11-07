@@ -11,15 +11,14 @@
     background: none;
     box-shadow: none;
     pointer-events: none;
+    transition: bottom 0.3s;
 
     &.active {
       bottom: 0;
-      border-right: $block-border-style;
     }
 
     @media (max-width: 767px) {
-      bottom: calc(100vh - 60px);
-      border-right: none;
+      bottom: 100vh;
     }
   }
 

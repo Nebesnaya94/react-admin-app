@@ -51,11 +51,14 @@
     align-items: center;
     width: 32px;
     height: 23px;
+    transition: transform 0.3s;
 
     &.active {
       transform: rotate(45deg);
 
       .header__burger-line {
+        background: transparent;
+
         &::before {
           top: 0;
         }
@@ -85,6 +88,7 @@
       width: 32px;
       height: 3px;
       background: $main-color;
+      transition: top 0.2s, transform 0.2s;
     }
 
     &::after {
@@ -94,6 +98,7 @@
       width: 32px;
       height: 3px;
       background: $main-color;
+      transition: top 0.2s, transform 0.2s;
     }
   }
 }

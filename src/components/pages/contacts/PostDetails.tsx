@@ -5,13 +5,13 @@ import { IPost } from "../../../models/types";
 import { capitalize } from "../../../API/helpers";
 
 interface IPostDetailsProps {
-  post: IPost;
+  post: IPost | null;
   handleClose: (record: IPost | null) => void;
 }
 
 export const PostDetails: FC<IPostDetailsProps> = ({ post, handleClose }) => {
   return (
-    <div className="item-details">
+    <div className={`item-details${post ? " " + "active" : ""}`}>
       <div className="item-details__wrapper">
         <Button
           onClick={() => {

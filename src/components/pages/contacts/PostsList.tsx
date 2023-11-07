@@ -49,7 +49,7 @@ export const PostsList: FC = () => {
           <TextField label="Post" source="title" />
         </Datagrid>
       </List>
-      {postData && <PostDetails handleClose={setPostData} post={postData} />}
+      <PostDetails handleClose={setPostData} post={postData} />
     </div>
   );
 };

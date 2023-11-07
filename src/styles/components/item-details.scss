@@ -3,12 +3,25 @@
   top: 0;
   bottom: 0;
   right: 0;
-  width: 440px;
+  width: 0;
   z-index: 1200;
   border-radius: 0;
   background: $background-color;
   box-shadow: -4px 0px 20px 0px rgba(#6f717a, 0.2);
   border-left: $block-border-style;
+  transition: width 0.3s;
+
+  &.active {
+    width: 440px;
+
+    @media (max-width: 460px) {
+      width: calc(100vw - 20px);
+    }
+
+    .item-details__close {
+      transform: scale(1);
+    }
+  }
 
   &__wrapper {
     position: relative;
@@ -28,11 +41,9 @@
       left: -16px;
       border: 2px solid #eff0f1;
       box-shadow: -4px 0px 20px 0px rgba(#6f717a, 0.2);
+      transform: scale(0);
+      transition: scale 0.3s;
     }
-  }
-
-  @media (max-width: 460px) {
-    width: calc(100vw - 20px);
   }
 }
 
